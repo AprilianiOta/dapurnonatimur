@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dapur Nona Timur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #fffdf8;
+      color: #333;
+    }
+
+    header {
+      background-color: #6a1b1a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 5px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      margin: 5px;
+      padding: 10px 18px;
+      background: #ffe0cc;
+      border: none;
+      color: #6a1b1a;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background: #ffcc99;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      min-height: 300px;
+      animation: fade 0.3s ease-in-out;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #6a1b1a;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .produk-galeri {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .produk-galeri img {
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    blockquote {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: #fff0e5;
+      border-left: 5px solid #ff9966;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #6a1b1a;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      .produk-galeri {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dapur Nona Timur</h1>
+    <p>Lezat, Tradisional, dan Membumi</p>
+    <nav>
+      <button onclick="showPage('beranda')">Beranda</button>
+      <button onclick="showPage('tentang')">Tentang</button>
+      <button onclick="showPage('produk')">Produk</button>
+      <button onclick="showPage('testimoni')">Testimoni</button>
+      <button onclick="showPage('kontak')">Kontak</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda">
+      <h2>Selamat Datang</h2>
+      <p><strong>Dapur Nona Timur</strong> menyajikan makanan khas dari Timur Indonesia. Kami hadir membawa rasa otentik dari Papua, NTT, dan Maluku langsung ke meja makan Anda.</p>
+    </section>
+
+    <section id="tentang" class="hidden">
+      <h2>Tentang Kami</h2>
+      <p>Kami adalah pelaku UMKM kuliner yang fokus pada pelestarian cita rasa Nusantara Timur dengan kualitas bahan segar, tanpa MSG, dan proses tradisional.</p>
+    </section>
+
+    <section id="produk" class="hidden">
+      <h2>Produk Kami</h2>
+      <ul>
+        <li>Se’i Sapi</li>
+        <li>Papeda & Kuah Ikan Kuning</li>
+        <li>Jagung Bose & Abon Ikan</li>
+        <li>Kue Lontar Mini</li>
+        <li>Sambal Lu’at</li>
+      </ul>
+      <div class="produk-galeri">
+        <img src="download 2.jpg" alt="Se'i Sapi">
+        <img src="download (4).jpg" alt="Papeda">
+        <img src="download (3).jpg" alt="Jagung Bose">
+        <img src="download 1.jpg" alt="Kue Lontar">
+        <img src="download 5.jpg" alt="Sambal Lu'at">
+        <img src="download 6.jpg" alt="Abon Ikan">
+        <img src="download 7.jpg" alt="Kuah Ikan Kuning">
+      </div>
+    </section>
+
+    <section id="testimoni" class="hidden">
+      <h2>Testimoni</h2>
+      <blockquote>"Rasa autentik sekali, seperti masakan nenek saya di kampung. Recommended banget!" – Ibu Lani</blockquote>
+      <blockquote>"Papeda dan kuah kuningnya enak banget, porsi juga pas dan bersih." – Budi, Surabaya</blockquote>
+    </section>
+
+    <section id="kontak" class="hidden">
+      <h2>Hubungi Kami</h2>
+      <p><strong>Alamat:</strong> Jl. El Tari No. 17, Kupang, NTT</p>
+      <p><strong>WhatsApp:</strong> +62 812-8899-7701</p>
+      <p><strong>Email:</strong> dapurnonatimur@gmail.com</p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/dapurnonatimur" target="_blank">@dapurnonatimur</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Dapur Nona Timur
+  </footer>
+
+  <script>
+    function showPage(id) {
+      const sections = document.querySelectorAll("main section");
+      sections.forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
